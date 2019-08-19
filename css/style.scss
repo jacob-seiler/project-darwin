@@ -1,19 +1,44 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans&display=swap");
 
+$colors: (
+	"base": #252525,
+	"light": #f3f3f3
+);
+
+@function get-color($color) {
+	@return map-get($colors, $color);
+}
+
 * {
 	padding: 0;
 	margin: 0;
 }
 
 body {
+	display: block;
+	position: relative;
 	font-family: "Montserrat", sans-serif;
+
+	color: get-color(light);
+	background-color: get-color(base);
 }
 
 h1 {
 	font-family: "Noto Sans", sans-serif;
 }
 
+.button {
+	cursor: pointer;
+	background-color: rgb(255, 97, 202);
+
+	display: inline-block;
+	font-size: 30px;
+	padding: 15px;
+	border-radius: 15px;
+}
+
 .selection {
+	display: block;
 	text-align: center;
 
 	.choices {
@@ -22,6 +47,7 @@ h1 {
 	}
 
 	.option {
+		cursor: pointer;
 		height: 500px;
 		width: 500px;
 
@@ -32,5 +58,9 @@ h1 {
 
 	.option:hover {
 		box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.25);
+	}
+
+	.button {
+		margin-top: 100px;
 	}
 }

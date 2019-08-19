@@ -5,14 +5,28 @@
 }
 
 body {
+  display: block;
+  position: relative;
   font-family: "Montserrat", sans-serif;
+  color: #f3f3f3;
+  background-color: #252525;
 }
 
 h1 {
   font-family: "Noto Sans", sans-serif;
 }
 
+.button {
+  cursor: pointer;
+  background-color: #ff61ca;
+  display: inline-block;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 15px;
+}
+
 .selection {
+  display: block;
   text-align: center;
 }
 
@@ -26,6 +40,7 @@ h1 {
 }
 
 .selection .option {
+  cursor: pointer;
   height: 500px;
   width: 500px;
   text-align: left;
@@ -40,5 +55,9 @@ h1 {
 .selection .option:hover {
   -webkit-box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.25);
           box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.25);
+}
+
+.selection .button {
+  margin-top: 100px;
 }
 /*# sourceMappingURL=style.css.map */

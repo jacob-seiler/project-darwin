@@ -5,8 +5,9 @@ function updateSelections() {
 	// TODO get new options from server, then update DOM
 }
 
-function getResults(data) {
+function getResults() {
 	// TODO send data array to server and get results, then update DOM
+	// TODO error from server if selections is less than 3
 }
 
 document.addEventListener("DOMContentLoaded", () => {
