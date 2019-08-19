@@ -1,1 +1,24 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.selection {
+  text-align: center;
+}
+
+.selection .choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */
