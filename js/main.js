@@ -1,4 +1,4 @@
-const options = document.querySelectorAll("option");
+const options = document.querySelectorAll(".option");
 let selections = [];
 
 function updateSelections() {
@@ -12,8 +12,11 @@ function getResults(data) {
 document.addEventListener("DOMContentLoaded", () => {
 	updateSelections();
 
-	options.addEventListener("click", e => {
-		selections.push(e.target);
-		updateSelections();
+	options.forEach(option => {
+		option.addEventListener("click", e => {
+			console.log(e.target);
+			selections.push(e.target);
+			updateSelections();
+		});
 	});
 });

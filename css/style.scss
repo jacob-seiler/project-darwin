@@ -18,5 +18,19 @@ h1 {
 
 	.choices {
 		display: flex;
+		justify-content: center;
+	}
+
+	.option {
+		height: 500px;
+		width: 500px;
+
+		text-align: left;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.option:hover {
+		box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.25);
 	}
 }

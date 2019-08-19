@@ -20,5 +20,25 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.selection .option {
+  height: 500px;
+  width: 500px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.selection .option:hover {
+  -webkit-box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.25);
+          box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.25);
 }
 /*# sourceMappingURL=style.css.map */
