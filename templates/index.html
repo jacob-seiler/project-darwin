@@ -13,18 +13,30 @@
 			<div class="line"></div>
 		</header>
 		<main>
-			<div class="selection">
-				<h1>Please select one of the options.</h1>
+			<div class="hidden selection">
+				<h1>Please select one of the options:</h1>
 				<div class="choices"></div>
 				<a class="hidden button button-results" onclick="getResults()"
 					>Submit Votes / See Results</a
 				>
 			</div>
-			<div class="hidden result">
-				<h1>Results</h1>
+			<div class="result">
+				<h1>Results:</h1>
 				<!-- Search / Filter options -->
 				<!-- Bar graph of top -->
+				<div class="graph">
+					<p amount="70">Ice Cream</p>
+					<p amount="16">Apple Pie</p>
+					<p amount="5">Sushi</p>
+				</div>
 				<!-- List of others -->
+				<div class="list">
+					<p amount="3">Tofu</p>
+					<p amount="2">Apple Juice</p>
+					<p amount="2">Coke</p>
+					<p amount="1">Bubble Gum</p>
+					<p amount="1">Chocolate</p>
+				</div>
 
 				<!-- For each, display img, title, ranking info -->
 			</div>

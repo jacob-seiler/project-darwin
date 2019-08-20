@@ -44,6 +44,11 @@ header {
   text-align: center;
 }
 
+.selection h1 {
+  text-align: left;
+  margin-left: 5%;
+}
+
 .selection .choices {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,7 +62,7 @@ header {
   cursor: pointer;
   height: 500px;
   width: 400px;
-  margin: 0 20px;
+  margin: 20px;
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,7 +78,41 @@ header {
 }
 
 .selection .button {
-  margin-top: 100px;
+  margin-top: 40px;
+}
+
+.result {
+  text-align: center;
+}
+
+.result h1 {
+  text-align: left;
+  margin-left: 5%;
+}
+
+.result .graph {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.result .graph p {
+  margin: 0 50px;
+}
+
+.result .graph p::before {
+  content: "";
+  height: 50px;
+  display: block;
+  background-color: #0ad658;
+}
+
+.result .list {
+  text-align: left;
 }
 
 .hidden {

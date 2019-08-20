@@ -57,6 +57,11 @@ header {
 	display: block;
 	text-align: center;
 
+	h1 {
+		text-align: left;
+		margin-left: 5%;
+	}
+
 	.choices {
 		display: flex;
 		justify-content: center;
@@ -67,7 +72,7 @@ header {
 		height: 500px;
 		width: 400px;
 
-		margin: 0 20px;
+		margin: 20px;
 
 		text-align: left;
 		display: flex;
@@ -79,13 +84,41 @@ header {
 	}
 
 	.button {
-		margin-top: 100px;
+		margin-top: 40px;
 	}
 }
 
 .result {
 	// TODO bar graph for top bew
 	// TODO list for rest
+
+	text-align: center;
+
+	h1 {
+		text-align: left;
+		margin-left: 5%;
+	}
+
+	.graph {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+
+		p {
+			margin: 0 50px;
+		}
+
+		p::before {
+			content: "";
+			height: 50px;
+			display: block;
+			background-color: get-color(primary);
+		}
+	}
+
+	.list {
+		text-align: left;
+	}
 }
 
 .hidden {
