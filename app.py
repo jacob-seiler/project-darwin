@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, jsonify
 
 app = Flask(__name__)
 
@@ -11,6 +11,10 @@ def main():
 @app.route('/data', methods=['GET'])
 def data():
     if request.method == 'GET':
-        return {'img': url_for('static', filename='temp-1.png'),
-                'title': 'Fransisco',
-                'notes': 'CISC124'}
+        # TODO select randomly from list
+        # TODO return multiple JSONs depending on input
+        return jsonify(
+            img=url_for('static', filename='temp-1.png'),
+            title='Fransisco',
+            notes=['CISC124']
+        )

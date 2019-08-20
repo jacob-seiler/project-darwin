@@ -6,7 +6,17 @@ const buttonResults = document.querySelector(".button-results");
 let selections = [];
 
 function getRandomData(dataAmount) {
-	// TODO gets data from the server, returns JSON for the options
+	// TODO use dataAmount to select the amount to fetch
+
+	let totalData = [];
+
+	fetch("/data")
+		.then(resp => resp.json())
+		.then(function(data) {
+			totalData.push(data);
+		});
+
+	return totalData;
 }
 
 function updateOptions(options) {
@@ -17,35 +27,31 @@ function updateOptions(options) {
 		buttonResults.classList.remove("hidden");
 	}
 
+	let data = getRandomData(options.length);
+
 	for (let i = 0; i < options.length; i++) {
 		let element = options[i].children[0];
 		element.innerHTML = "";
 
 		// TODO get actual data
 		let title = document.createElement("H2");
-		title.textContent = "First Last";
-
-		let sub1 = document.createElement("P");
-		sub1.textContent = "Computing";
-
-		let sub2 = document.createElement("P");
-		sub2.textContent = "3 years";
+		title.textContent = data.title; // TODO use array
 
 		element.appendChild(title);
-		element.appendChild(sub1);
-		element.appendChild(sub2);
+
+		for (let j = 0; j < data.notes.length; j++) {
+			let sub = document.createElement("P");
+			sub.textContent = data.notes[j]; // TODO data will be an array
+			element.appendChild(sub);
+		}
+
+		// TODO set background-image
 	}
 }
 
 function getResults() {
 	// TODO send data array to server and get results, then update DOM
 	// TODO error from server if selections is less than 3
-
-	fetch("/data")
-		.then(resp => resp.json())
-		.then(function(data) {
-			console.log(data);
-		});
 }
 
 function generateOptions() {
@@ -65,8 +71,6 @@ function generateOptions() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	console.log(getResults());
-
 	const options = generateOptions();
 	updateOptions(options);
 
