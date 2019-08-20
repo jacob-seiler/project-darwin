@@ -5,6 +5,10 @@ const minResponses = 3;
 const buttonResults = document.querySelector(".button-results");
 let selections = [];
 
+function getRandomData(dataAmount) {
+	// TODO gets data from the server, returns JSON for the options
+}
+
 function updateOptions(options) {
 	// TODO remove on click event until new stuff comes in
 	// TODO get new options from server, then update DOM
@@ -13,20 +17,11 @@ function updateOptions(options) {
 		buttonResults.classList.remove("hidden");
 	}
 
-	/*
-	<div class="option option-1" style="background-image: url('temp-1.png')">
-		<div class="option-content">
-			<h2>First Last</h2>
-			<p>Computing</p>
-			<p>3 years</p>
-		</div>
-    </div>;
-    */
-
 	for (let i = 0; i < options.length; i++) {
 		let element = options[i].children[0];
 		element.innerHTML = "";
 
+		// TODO get actual data
 		let title = document.createElement("H2");
 		title.textContent = "First Last";
 
