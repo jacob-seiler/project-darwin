@@ -40,6 +40,12 @@ function updateOptions(options) {
 function getResults() {
 	// TODO send data array to server and get results, then update DOM
 	// TODO error from server if selections is less than 3
+
+	fetch("/data")
+		.then(resp => resp.json())
+		.then(function(data) {
+			console.log(data);
+		});
 }
 
 function generateOptions() {
@@ -59,6 +65,8 @@ function generateOptions() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+	console.log(getResults());
+
 	const options = generateOptions();
 	updateOptions(options);
 
