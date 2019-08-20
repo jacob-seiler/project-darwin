@@ -2,7 +2,9 @@
 
 $colors: (
 	"base": #252525,
-	"light": #f3f3f3
+	"light": #f3f3f3,
+	"primary": #0ad658,
+	"secondary": #39d0eb
 );
 
 @function get-color($color) {
@@ -29,12 +31,26 @@ h1 {
 
 .button {
 	cursor: pointer;
-	background-color: rgb(255, 97, 202);
+	background-color: get-color(primary);
 
 	display: inline-block;
-	font-size: 30px;
-	padding: 15px;
+	font-size: 25px;
+	padding: 20px 30px;
 	border-radius: 15px;
+}
+
+header {
+	margin-top: 5px;
+	text-align: center;
+	font-size: 36px;
+}
+
+.line {
+	background-color: get-color(light);
+	height: 5px;
+	width: 90%;
+	margin: 20px 0;
+	margin-left: 5%;
 }
 
 .selection {
@@ -49,7 +65,9 @@ h1 {
 	.option {
 		cursor: pointer;
 		height: 500px;
-		width: 500px;
+		width: 400px;
+
+		margin: 0 20px;
 
 		text-align: left;
 		display: flex;
@@ -63,4 +81,8 @@ h1 {
 	.button {
 		margin-top: 100px;
 	}
+}
+
+.hidden {
+	display: none;
 }

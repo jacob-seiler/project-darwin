@@ -8,35 +8,27 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<h1 style="text-align: center">Project Dawrin</h1>
-		<div class="selection">
-			<p>Please select one of the options.</p>
-			<div class="choices">
-				<div class="option option-1" style="background-image: url('temp-1.png')">
-					<div class="option-content">
-						<h2>First Last</h2>
-						<p>Computing</p>
-						<p>3 years</p>
-					</div>
-				</div>
-				<div class="option option-2" style="background-image: url('temp-2.png')">
-					<div class="option-content">
-						<h2>First Last</h2>
-						<p>Computing</p>
-						<p>3 years</p>
-					</div>
-				</div>
+		<header>
+			<h1>Project Dawrin</h1>
+			<div class="line"></div>
+		</header>
+		<main>
+			<div class="selection">
+				<p>Please select one of the options.</p>
+				<div class="choices"></div>
+				<a class="hidden button button-results" onclick="getResults()"
+					>Submit Votes / See Results</a
+				>
 			</div>
-			<a class="button button-results" onclick="getResults()">See Results</a>
-		</div>
-		<div hidden class="result">
-			<h1>Results</h1>
-			<!-- Search / Filter options -->
-			<!-- Bar graph of top -->
-			<!-- List of others -->
+			<div hidden class="result">
+				<h1>Results</h1>
+				<!-- Search / Filter options -->
+				<!-- Bar graph of top -->
+				<!-- List of others -->
 
-			<!-- For each, display img, title, ranking info -->
-		</div>
+				<!-- For each, display img, title, ranking info -->
+			</div>
+		</main>
 		<script src="js/main.js"></script>
 	</body>
 </html>
