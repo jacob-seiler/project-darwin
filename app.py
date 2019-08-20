@@ -13,4 +13,4 @@ def data():
     if request.method == 'GET':
         return {'img': url_for('static', filename='temp-1.png'),
                 'title': 'Fransisco',
-                'notes': 'CISC 124'}
+                'notes': 'CISC124'}
